@@ -66,7 +66,7 @@ solucao(ListaSolucao) :-
     aEsquerda(equipe(_, _, _, 4, _, _), equipe(_, _, _, _, _, 380), ListaSolucao),
 
     % Oscar está na equipe que tem 400 pontos.
-    member(equipe(_, _, Oscar, _, _, 400), ListaSolucao),
+    member(equipe(_, _, oscar, _, _, 400), ListaSolucao),
 
     % Na segunda posição está a equipe com 410 pontos.
     Pontuacao2 = 410,
@@ -78,7 +78,7 @@ solucao(ListaSolucao) :-
     Idade3 = 25,
     
     % Oscar está exatamente à direita da equipe do capitão mais novo.
-    aDireita(equipe(_, _, Oscar, _, _, _), equipe(_, _, _, _, 23, _), ListaSolucao),
+    aDireita(equipe(_, _, oscar, _, _, _), equipe(_, _, _, _, 23, _), ListaSolucao),
     
     % A equipe Vermelha está em algum lugar entre a equipe do capitão mais velho e a equipe com mais strikes, nessa ordem.
     aDireita(equipe(vermelho, _, _, _, _, _), equipe(_, _, _, _, 27, _), ListaSolucao),
