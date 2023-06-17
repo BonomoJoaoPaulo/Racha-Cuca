@@ -63,44 +63,65 @@ solucao(ListaSolucao) :-
     ],
 
     % A equipe com 4 strikes está exatamente à esquerda da que tem 380 pontos.
+    aEsquerda(equipe(_, _, _, 4, _, _), equipe(_, _, _, _, _, 380), ListaSolucao),
 
     % Oscar está na equipe que tem 400 pontos.
+    member(equipe(_, _, Oscar, _, _, 400), ListaSolucao),
 
     % Na segunda posição está a equipe com 410 pontos.
+    Pontuacao2 = 410,
 
     % O capitão de 26 anos está na equipe que tem 390 pontos.
+    member(equipe(_, _, _, _, 26, 390), ListaSolucao),
     
     % Na terceira posição está a equipe do capitão de 25 anos.
+    Idade3 = 25,
     
     % Oscar está exatamente à direita da equipe do capitão mais novo.
+    aDireita(equipe(_, _, Oscar, _, _, _), equipe(_, _, _, _, 23, _), ListaSolucao),
     
     % A equipe Vermelha está em algum lugar entre a equipe do capitão mais velho e a equipe com mais strikes, nessa ordem.
+    aDireita(equipe(vermelho, _, _, _, _, _), equipe(_, _, _, _, 27, _), ListaSolucao),
+    aEsquerda(equipe(vermelho, _, _, _, _, _), equipe(_, _, _, 4, _, _), ListaSolucao),
     
     % A equipe Fenix está ao lado da equipe que fez 3 strikes.
+    aoLado(equipe(_, fenix, _, _, _, _), equipe(_, _, _, 3, _, _), ListaSolucao),
     
     % A equipe que fez 1 strike está ao lado da equipe que tem 400 pontos.
+    aoLado(equipe(_, _, _, 1, _, _), equipe(_, _, _, _, _, 400), ListaSolucao),
     
     % A equipe com 390 pontos está exatamente à direita da equipe que fez 3 strikes.
+    aDireita(equipe(_, _, _, _, _, 390), equipe(_, _, _, 3, _, _), ListaSolucao),
     
     % Os Peraltas ainda não fizeram strike.
+    member(equipe(_, peraltas, _, 0, _, _), ListaSolucao),
     
     % A equipe do Juliano está exatamente à direita da equipe do Oscar.
+    aDireita(equipe(_, _, juliano, _, _, _), equipe(_, _, oscar, _, _, _), ListaSolucao),
     
     % Márcio é o capitão da equipe Fenix.
+    member(equipe(_, fenix, marcio, _, _, _), ListaSolucao),
     
     % A equipe de Carlos está na quinta posição.
+    Equipe5 = carlos,
     
     % Os Tratores estão ao lado da equipe que fez 2 strikes.
+    aoLado(equipe(_, tratores, _, _, _, _), equipe(_, _, _, 2, _, _), ListaSolucao),
     
     % A equipe com 1 strike está exatamente à esquerda da equipe 14 Biz.
+    aEsquerda(equipe(_, _, _, 1, _, _), equipe(_, catorzebiz, _, _, _, _), ListaSolucao),
     
     % As equipes verde e azul estão lado a lado.
+    aoLado(equipe(verde, _, _, _, _, _), equipe(azul, _, _, _, _, _), ListaSolucao),
     
     % O capitão mais novo está na equipe de uniforme Vermelho.
+    member(equipe(vermelho, _, _, _, 23, _), ListaSolucao),
     
     % A equipe de Branco está exatamente à esquerda da equipe de Verde.
+    aEsquerda(equipe(branco, _, _, _, _, _), equipe(verde, _, _, _, _, _), ListaSolucao),
     
     % A equipe com 390 pontos está exatamente à esquerda da equipe Azul.
+    aEsquerda(equipe(_, _, _, _, _, 390), equipe(azul, _, _, _, _, _), ListaSolucao),
 
 
 
