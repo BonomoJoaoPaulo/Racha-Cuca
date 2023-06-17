@@ -62,6 +62,48 @@ solucao(ListaSolucao) :-
         equipe(Uniforme5, Equipe5, Capitao5, Strikes5, Idade5, Pontuacao5)
     ],
 
+    % A equipe com 4 strikes está exatamente à esquerda da que tem 380 pontos.
+
+    % Oscar está na equipe que tem 400 pontos.
+
+    % Na segunda posição está a equipe com 410 pontos.
+
+    % O capitão de 26 anos está na equipe que tem 390 pontos.
+    
+    % Na terceira posição está a equipe do capitão de 25 anos.
+    
+    % Oscar está exatamente à direita da equipe do capitão mais novo.
+    
+    % A equipe Vermelha está em algum lugar entre a equipe do capitão mais velho e a equipe com mais strikes, nessa ordem.
+    
+    % A equipe Fenix está ao lado da equipe que fez 3 strikes.
+    
+    % A equipe que fez 1 strike está ao lado da equipe que tem 400 pontos.
+    
+    % A equipe com 390 pontos está exatamente à direita da equipe que fez 3 strikes.
+    
+    % Os Peraltas ainda não fizeram strike.
+    
+    % A equipe do Juliano está exatamente à direita da equipe do Oscar.
+    
+    % Márcio é o capitão da equipe Fenix.
+    
+    % A equipe de Carlos está na quinta posição.
+    
+    % Os Tratores estão ao lado da equipe que fez 2 strikes.
+    
+    % A equipe com 1 strike está exatamente à esquerda da equipe 14 Biz.
+    
+    % As equipes verde e azul estão lado a lado.
+    
+    % O capitão mais novo está na equipe de uniforme Vermelho.
+    
+    % A equipe de Branco está exatamente à esquerda da equipe de Verde.
+    
+    % A equipe com 390 pontos está exatamente à esquerda da equipe Azul.
+
+
+
     % A aluna de calca branca esta em algum lugar a esquerda da aluna que se matriculou em 2014.
     aEsquerda(aluna(branca, _, _, _, _, _), aluna(_, _, _, 2014, _, _), ListaSolucao),
 
