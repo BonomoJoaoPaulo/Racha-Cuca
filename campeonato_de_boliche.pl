@@ -103,7 +103,7 @@ solucao(ListaSolucao) :-
     member(equipe(_, fenix, marcio, _, _, _), ListaSolucao),
     
     % A equipe de Carlos está na quinta posição.
-    Equipe5 = carlos,
+    Capitao5 = carlos,
     
     % Os Tratores estão ao lado da equipe que fez 2 strikes.
     aoLado(equipe(_, tratores, _, _, _, _), equipe(_, _, _, 2, _, _), ListaSolucao),
