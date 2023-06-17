@@ -72,7 +72,7 @@ solucao(ListaSolucao) :-
     member(aluna(_, marta, _, _, _, motorista), ListaSolucao),
 
     % A aluna de calca verde esta em algum lugar entre a arquiteta e a mulher de 36 anos, nessa ordem.
-    aDireta(aluna(verde, _, _, _, _, _), aluna(_, _, _, _, _, arquiteta), ListaSolucao),
+    aDireita(aluna(verde, _, _, _, _, _), aluna(_, _, _, _, _, arquiteta), ListaSolucao),
     aEsquerda(aluna(verde, _, _, _, _, _), aluna(_, _, _, _, 36, _), ListaSolucao),
 
     % No quarto lugar esta a mulher de 30 anos.
@@ -123,18 +123,21 @@ solucao(ListaSolucao) :-
     % Giovana está ao lado da Comerciante.
     aoLado(aluna(_, giovana, _, _, _, _), aluna(_, _, _, _, _, comerciante), ListaSolucao),
 
-    %Testa todas as possibilidades...
-    nacionalidade(Nacionalidade1), nacionalidade(Nacionalidade2), nacionalidade(Nacionalidade3), nacionalidade(Nacionalidade4), nacionalidade(Nacionalidade5),
-    todosDiferentes([Nacionalidade1, Nacionalidade2, Nacionalidade3, Nacionalidade4, Nacionalidade5]),
-    
-    saida(Saida1), saida(Saida2), saida(Saida3), saida(Saida4), saida(Saida5),
-    todosDiferentes([Saida1, Saida2, Saida3, Saida4, Saida5]),
-    
-    carregamento(Carregamento1), carregamento(Carregamento2), carregamento(Carregamento3), carregamento(Carregamento4), carregamento(Carregamento5),
-    todosDiferentes([Carregamento1, Carregamento2, Carregamento3, Carregamento4, Carregamento5]),
-    
-    chamine(Chamine1), chamine(Chamine2), chamine(Chamine3), chamine(Chamine4), chamine(Chamine5),
-    todosDiferentes([Chamine1, Chamine2, Chamine3, Chamine4, Chamine5]),
-    
-    destino(Destino1), destino(Destino2), destino(Destino3), destino(Destino4), destino(Destino5),
-    todosDiferentes([Destino1, Destino2, Destino3, Destino4, Destino5]).
+    %Testando todas as possibilidades...
+    calca(Calca1), calca(Calca2), calca(Calca3), calca(Calca4), calca(Calca5),
+    todosDiferentes([Calca1, Calca2, Calca3, Calca4, Calca5]),
+
+    nome(Nome1), nome(Nome2), nome(Nome3), nome(Nome4), nome(Nome5),
+    todosDiferentes([Nome1, Nome2, Nome3, Nome4, Nome5]),
+
+    posicao(Posicao1), posicao(Posicao2), posicao(Posicao3), posicao(Posicao4), posicao(Posicao5),
+    todosDiferentes([Posicao1, Posicao2, Posicao3, Posicao4, Posicao5]),
+
+    matricula(Matricula1), matricula(Matricula2), matricula(Matricula3), matricula(Matricula4), matricula(Matricula5),
+    todosDiferentes([Matricula1, Matricula2, Matricula3, Matricula4, Matricula5]),
+
+    idade(Idade1), idade(Idade2), idade(Idade3), idade(Idade4), idade(Idade5),
+    todosDiferentes([Idade1, Idade2, Idade3, Idade4, Idade5]),
+
+    profissao(Profissao1), profissao(Profissao2), profissao(Profissao3), profissao(Profissao4), profissao(Profissao5),
+    todosDiferentes([Profissao1, Profissao2, Profissao3, Profissao4, Profissao5]).
