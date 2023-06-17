@@ -1,38 +1,38 @@
-calca(amarela).
-calca(azul).
-calca(branca).
-calca(verde).
-calca(vermelha).
+uniforme(amarelo).
+uniforme(azul).
+uniforme(branco).
+uniforme(verde).
+uniforme(vermelho).
 
-nome(alice).
-nome(giovana).
-nome(isabela).
-nome(marta).
-nome(roberta).
+equipe(catorzebiz).
+equipe(fenix).
+equipe(peraltas).
+equipe(supinos).
+equipe(tratores).
 
-posicao(arvore).
-posicao(corvo).
-posicao(lotus).
-posicao(ponte).
-posicao(triangulo).
+capitao(arthur).
+capitao(carlos).
+capitao(juliano).
+capitao(marcio).
+capitao(oscar).
 
-matricula(2012).
-matricula(2013).
-matricula(2014).
-matricula(2015).
-matricula(2016).
+strikes(0).
+strikes(1).
+strikes(2).
+strikes(3).
+strikes(4).
 
+idade(23).
 idade(24).
-idade(30).
-idade(36).
-idade(42).
-idade(48).
+idade(25).
+idade(26).
+idade(27).
 
-profissao(arquiteta).
-profissao(comerciante).
-profissao(manicure).
-profissao(motorista).
-profissao(psicologa).
+pontuacao(380).
+pontuacao(390).
+pontuacao(400).
+pontuacao(410).
+pontuacao(420).
 
 %X está à ao lado de Y
 aoLado(X,Y,Lista) :- nextto(X,Y,Lista);nextto(Y,X,Lista).
@@ -55,11 +55,11 @@ todosDiferentes([H|T]) :- not(member(H,T)), todosDiferentes(T).
 solucao(ListaSolucao) :- 
 
     ListaSolucao = [
-        aluna(Calca1, Nome1, Posicao1, Matricula1, Idade1, Profissao1),
-        aluna(Calca2, Nome2, Posicao2, Matricula2, Idade2, Profissao2),
-        aluna(Calca3, Nome3, Posicao3, Matricula3, Idade3, Profissao3),
-        aluna(Calca4, Nome4, Posicao4, Matricula4, Idade4, Profissao4),
-        aluna(Calca5, Nome5, Posicao5, Matricula5, Idade5, Profissao5)
+        equipe(Uniforme1, Equipe1, Capitao1, Strikes1, Idade1, Pontuacao1),
+        equipe(Uniforme2, Equipe2, Capitao2, Strikes2, Idade2, Pontuacao2),
+        equipe(Uniforme3, Equipe3, Capitao3, Strikes3, Idade3, Pontuacao3),
+        equipe(Uniforme4, Equipe4, Capitao4, Strikes4, Idade4, Pontuacao4),
+        equipe(Uniforme5, Equipe5, Capitao5, Strikes5, Idade5, Pontuacao5)
     ],
 
     % A aluna de calca branca esta em algum lugar a esquerda da aluna que se matriculou em 2014.
