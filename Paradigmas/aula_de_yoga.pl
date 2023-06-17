@@ -1,33 +1,38 @@
-nacionalidade(brasileiro).
-nacionalidade(espanhol).
-nacionalidade(grego).
-nacionalidade(ingles).
-nacionalidade(frances).
+calca(amarela).
+calca(azul).
+calca(branca).
+calca(verde).
+calca(vermelha).
 
-saida(5).
-saida(6).
-saida(7).
-saida(8).
-saida(9).
+nome(Alice).
+nome(Giovana).
+nome(Isabela).
+nome(Marta).
+nome(Roberta).
 
-carregamento(arroz).
-carregamento(cacau).
-carregamento(cha).
-carregamento(milho).
-carregamento(cafe).
+posicao(arvore).
+posicao(corvo).
+posicao(lotus).
+posicao(ponte).
+posicao(triangulo).
 
-chamine(azul).
-chamine(branca).
-chamine(verde).
-chamine(vermelha).
-chamine(preta).
+matricula(2012).
+matricula(2013).
+matricula(2014).
+matricula(2015).
+matricula(2016).
 
-destino(hamburgo).
-destino(macau).
-destino(manila).
-destino(santos).
-destino(rotterdam).
+idade(24).
+idade(30).
+idade(36).
+idade(42).
+idade(48).
 
+profissao(arquiteta).
+profissao(comerciante).
+profissao(manicure).
+profissao(motorista).
+profissao(psicologa).
 
 %X está à ao lado de Y
 aoLado(X,Y,Lista) :- nextto(X,Y,Lista);nextto(Y,X,Lista).
