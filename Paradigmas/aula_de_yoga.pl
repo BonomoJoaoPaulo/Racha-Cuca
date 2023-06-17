@@ -45,6 +45,14 @@ aEsquerda(X,Y,Lista) :- nth0(IndexX,Lista,X),
 %X está à direita de Y (em qualquer posição à direita)
 aDireita(X,Y,Lista) :- aEsquerda(Y,X,Lista). 
 
+%X está exatamente à esquerda de Y
+exatamenteaEsquerda(X,Y,Lista) :- nth0(IndexX,Lista,X), 
+                                  nth0(IndexY,Lista,Y), 
+                                  IndexX =:= IndexY - 1.
+
+%X está exatamente à direita de Y
+exatamenteaDireita(X, Y, Lista) :- exatamenteaEsquerda(Y, X, Lista).
+
 %X está no canto se ele é o primeiro ou o último da lista
 noCanto(X,Lista) :- last(Lista,X).
 noCanto(X,[X|_]).
@@ -79,7 +87,7 @@ solucao(ListaSolucao) :-
     Idade4 = 30,
 
     % A manicure esta exatamente a esquerda da aluna que gosta de fazer a ponte.
-    aEsquerda(aluna(_, _, _, _, _, manicure), aluna(_, _, ponte, _, _, _), ListaSolucao),
+    exatamenteaEsquerda(aluna(_, _, _, _, _, manicure), aluna(_, _, ponte, _, _, _), ListaSolucao),
 
     % A aluna de calca azul esta ao lado da aluna de 48 anos.
     aoLado(aluna(azul, _, _, _, _, _), aluna(_, _, _, _, 48, _), ListaSolucao),
@@ -92,7 +100,7 @@ solucao(ListaSolucao) :-
     aDireita(aluna( _, _, _, _, _, motorista), aluna(branca, _, _, _, _, _), ListaSolucao),
 
     % A aluna que gosta da posicao lotus esta exatamente a esquerda da aluna que gosta da posicao triangulo.
-    aEsquerda(aluna(_, _, lotus, _, _, _), aluna(_, _, triangulo, _, _, _), ListaSolucao),
+    exatamenteaEsquerda(aluna(_, _, lotus, _, _, _), aluna(_, _, triangulo, _, _, _), ListaSolucao),
 
     % A mulher que se matriculou em 2013 esta no quarto lugar.
     Matricula4 = 2013,
