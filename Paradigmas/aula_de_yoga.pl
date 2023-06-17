@@ -123,51 +123,6 @@ solucao(ListaSolucao) :-
     % Giovana está ao lado da Comerciante.
     aoLado(aluna(_, giovana, _, _, _, _), aluna(_, _, _, _, _, comerciante), ListaSolucao),
 
-    %O navio Grego sai às 6 da manhã e carrega Café.
-    member(navio(grego, 6, cafe, _, _), ListaSolucao),
-
-    %O navio do meio tem a chaminé Preta.
-    Chamine3 = preta,
-    
-    %O navio Inglês sai às 9 da manhã.
-    member(navio(ingles, 9, _, _, _), ListaSolucao),
-    
-    %O navio Francês, que tem a chaminé Azul, está à esquerda do navio que carrega Café
-    aEsquerda(navio(frances, _, _, azul, _), navio(_, _, cafe, _, _), ListaSolucao),
-    
-    %À direita do navio que carrega Cacau está o navio que vai para Macau.
-    aEsquerda(navio(_, _, cacau, _, _), navio(_, _, _, _, macau), ListaSolucao),
-    
-    %O navio Brasileiro está indo para Manila.
-    member(navio(brasileiro, _, _, _, manila), ListaSolucao),
-    
-    %O navio que carrega Arroz está ancorado ao lado do navio com chaminé Verde.
-    aoLado(navio(_, _, arroz, _, _), navio(_, _, _, verde, _), ListaSolucao),
-    
-    %O navio que vai para Santos sai às 5 da manhã.
-    member(navio(_, 5, _, _, santos), ListaSolucao),
-    
-    %O navio Espanhol sai às 7 da manhã e está à direita do navio que vai para Macau.
-    aDireita(navio(espanhol, 7, _, _, _), navio(_, _, _, _, macau), ListaSolucao),
-    
-    %O navio com a chaminé Vermelha vai para Hamburgo.
-    member(navio(_, _, _, vermelha, hamburgo), ListaSolucao),
-    
-    %O navio que sai às 7 da manhã está ao lado do navio que tem a chaminé Branca.
-    aoLado(navio(_, 7, _, _, _), navio(_, _, _, branca, _), ListaSolucao),
-    
-    %O navio do canto carrega Milho.
-    noCanto(navio(_, _, milho, _, _),ListaSolucao),
-    
-    %O navio com chaminé Preta sai às 8 da manhã
-    member(navio(_, 8, _, preta, _), ListaSolucao),
-    
-    %O navio que que carrega Milho está ancorado ao lado do navio que carrega Arroz.
-    aoLado(navio(_, _, milho, _, _), navio(_, _, arroz, _, _), ListaSolucao),
-    
-    %O navio que vai para Hamburgo sai às 6 da manhã.
-    member(navio(_, 6, _, _, hamburgo), ListaSolucao),
-    
     %Testa todas as possibilidades...
     nacionalidade(Nacionalidade1), nacionalidade(Nacionalidade2), nacionalidade(Nacionalidade3), nacionalidade(Nacionalidade4), nacionalidade(Nacionalidade5),
     todosDiferentes([Nacionalidade1, Nacionalidade2, Nacionalidade3, Nacionalidade4, Nacionalidade5]),
